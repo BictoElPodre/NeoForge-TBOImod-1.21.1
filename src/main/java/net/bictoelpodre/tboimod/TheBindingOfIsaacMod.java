@@ -1,5 +1,7 @@
 package net.bictoelpodre.tboimod;
 
+import net.bictoelpodre.tboimod.block.ModBlocks;
+import net.bictoelpodre.tboimod.items.ModCreativeModeTabs;
 import net.bictoelpodre.tboimod.items.ModedItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -37,7 +39,10 @@ public class TheBindingOfIsaacMod {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModedItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -52,8 +57,11 @@ public class TheBindingOfIsaacMod {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModedItems.ABAROFSOAP);
-            event.accept(ModedItems.MOMSLIPSTICK);
+            event.accept(ModedItems.SULFURDUST);
+            event.accept(ModedItems.SULFURROCK);
+        }
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.SULFURBLOCK);
         }
     }
 

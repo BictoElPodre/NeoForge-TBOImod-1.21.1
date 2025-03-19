@@ -1,5 +1,13 @@
 {
   "item.thebindingofisaacmod.abarofsoap": "A bar of soap",
-  "item.thebindingofisaacmod.momslipstick": "Mom's lipstick"
+  "item.thebindingofisaacmod.momslipstick": "Mom's lipstick",
+  "item.thebindingofisaacmod.sulfurdust": "Sulfur dust",
+  "item.thebindingofisaacmod.sulfurrock": "Sulfur rock",
 
+
+  "block.thebindingofisaacmod.basementfloor": "Basement floor",
+  "block.thebindingofisaacmod.sulfurblock": "Sulfur block",
+
+  "creativetab.thebindingofisaacmod.tboipassiveitemstab": "TBOI passive items",
+  "creativetab.thebindingofisaacmod.tboifloorstab": "TBOI floors blocks"
 }

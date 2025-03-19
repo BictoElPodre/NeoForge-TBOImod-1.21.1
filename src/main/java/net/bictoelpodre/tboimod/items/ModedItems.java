@@ -13,6 +13,10 @@ public class ModedItems {
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> MOMSLIPSTICK = ITEMS.register("momslipstick",
             () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> SULFURDUST = ITEMS.register("sulfurdust",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> SULFURROCK = ITEMS.register("sulfurrock",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
