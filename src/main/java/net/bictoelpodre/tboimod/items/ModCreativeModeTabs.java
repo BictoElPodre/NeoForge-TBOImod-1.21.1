@@ -34,6 +34,15 @@ public class ModCreativeModeTabs {
 
                     }).build());
 
+    public static final Supplier<CreativeModeTab> TBOIPICKUPSTAB = CREATIVE_MODE_TAB.register("tboipickupstab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModedItems.BOMB.get()))
+                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(TheBindingOfIsaacMod.MOD_ID, "tboifloorstab"))
+                    .title(Component.translatable("creativetab.thebindingofisaacmod.tboipickupstab"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModedItems.BOMB);
+
+                    }).build());
+
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TAB.register(eventBus);

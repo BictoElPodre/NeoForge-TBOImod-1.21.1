@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "thebindingofisaacmod:sulfurrock"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "thebindingofisaacmod:sulfurdust"
+  }
+}

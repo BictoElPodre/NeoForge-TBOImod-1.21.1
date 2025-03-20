@@ -3,11 +3,13 @@
   "item.thebindingofisaacmod.momslipstick": "Mom's lipstick",
   "item.thebindingofisaacmod.sulfurdust": "Sulfur dust",
   "item.thebindingofisaacmod.sulfurrock": "Sulfur rock",
+  "item.thebindingofisaacmod.bomb": "Bomb",
 
 
   "block.thebindingofisaacmod.basementfloor": "Basement floor",
   "block.thebindingofisaacmod.sulfurblock": "Sulfur block",
 
   "creativetab.thebindingofisaacmod.tboipassiveitemstab": "TBOI passive items",
-  "creativetab.thebindingofisaacmod.tboifloorstab": "TBOI floors blocks"
+  "creativetab.thebindingofisaacmod.tboifloorstab": "TBOI floors blocks",
+  "creativetab.thebindingofisaacmod.tboipickupstab": "TBOI pickups"
 }
