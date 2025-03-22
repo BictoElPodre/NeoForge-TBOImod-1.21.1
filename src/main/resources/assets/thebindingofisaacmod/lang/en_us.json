@@ -1,15 +1,18 @@
 {
-  "item.thebindingofisaacmod.abarofsoap": "A bar of soap",
-  "item.thebindingofisaacmod.momslipstick": "Mom's lipstick",
-  "item.thebindingofisaacmod.sulfurdust": "Sulfur dust",
-  "item.thebindingofisaacmod.sulfurrock": "Sulfur rock",
+  "item.thebindingofisaacmod.abarofsoap": "A Bar Of Soap",
+  "item.thebindingofisaacmod.momslipstick": "Mom's Lipstick",
+  "item.thebindingofisaacmod.sulfurdust": "Sulfur Dust",
+  "item.thebindingofisaacmod.sulfurrock": "Sulfur Rock",
   "item.thebindingofisaacmod.bomb": "Bomb",
+  "item.thebindingofisaacmod.sulfuricacid": "Sulfuric Acid",
+  "item.thebindingofisaacmod.sulfuricdust": "Sulfuric Dust",
 
 
-  "block.thebindingofisaacmod.basementfloor": "Basement floor",
-  "block.thebindingofisaacmod.sulfurblock": "Sulfur block",
+  "block.thebindingofisaacmod.basementfloor": "Basement Floor",
+  "block.thebindingofisaacmod.sulfurblock": "Sulfur Block",
+  "block.thebindingofisaacmod.basementrock": "Basement Rock",
 
-  "creativetab.thebindingofisaacmod.tboipassiveitemstab": "TBOI passive items",
-  "creativetab.thebindingofisaacmod.tboifloorstab": "TBOI floors blocks",
-  "creativetab.thebindingofisaacmod.tboipickupstab": "TBOI pickups"
+  "creativetab.thebindingofisaacmod.tboipassiveitemstab": "TBOI Passive Items",
+  "creativetab.thebindingofisaacmod.tboifloorstab": "TBOI Floors Blocks",
+  "creativetab.thebindingofisaacmod.tboipickupstab": "TBOI Pickups"
 }

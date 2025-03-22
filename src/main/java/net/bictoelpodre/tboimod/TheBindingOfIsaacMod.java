@@ -59,6 +59,7 @@ public class TheBindingOfIsaacMod {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModedItems.SULFURDUST);
             event.accept(ModedItems.SULFURROCK);
+            event.accept(ModedItems.SULFURICDUST);
         }
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.SULFURBLOCK);

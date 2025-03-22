@@ -1,6 +1,7 @@
 package net.bictoelpodre.tboimod.block;
 
 import net.bictoelpodre.tboimod.TheBindingOfIsaacMod;
+import net.bictoelpodre.tboimod.block.custom.SulfurBlock;
 import net.bictoelpodre.tboimod.items.ModedItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -19,10 +20,13 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> BASEMENTFLOOR = registerBlock("basementfloor",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(0.5F).requiresCorrectToolForDrops().sound(SoundType.MUD_BRICKS)));
+                    .strength(-1F).requiresCorrectToolForDrops().sound(SoundType.MUD_BRICKS)));
     public static final DeferredBlock<Block> SULFURBLOCK = registerBlock("sulfurblock",
-            () -> new Block(BlockBehaviour.Properties.of()
+            () -> new SulfurBlock(BlockBehaviour.Properties.of()
                     .strength(1F).requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK)));
+    public static final DeferredBlock<Block> BASEMENTROCK = registerBlock("basementrock",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(-1F).requiresCorrectToolForDrops().sound(SoundType.MUD_BRICKS)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

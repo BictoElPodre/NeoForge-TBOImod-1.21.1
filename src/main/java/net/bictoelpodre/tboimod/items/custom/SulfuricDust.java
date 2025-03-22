@@ -1,6 +1,6 @@
+
 package net.bictoelpodre.tboimod.items.custom;
 
-import net.bictoelpodre.tboimod.block.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
@@ -11,10 +11,11 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class BombItem extends Item {
-    public BombItem(Properties properties) {
+public class SulfuricDust extends Item {
+    public SulfuricDust(Properties properties) {
         super(properties);
     }
 
@@ -25,7 +26,7 @@ public class BombItem extends Item {
         Player player = context.getPlayer();
         BlockState blockState = level.getBlockState(blockPos);
 
-        if(blockState.is(ModBlocks.BASEMENTROCK.get())) {
+        if(blockState.is(Blocks.WATER_CAULDRON)) {
             if (!level.isClientSide) {
                 level.playSound(null,player.getX(),player.getY(),player.getZ(),
                         SoundEvents.GENERIC_EXPLODE, player.getSoundSource(),1.0F,0.5F);

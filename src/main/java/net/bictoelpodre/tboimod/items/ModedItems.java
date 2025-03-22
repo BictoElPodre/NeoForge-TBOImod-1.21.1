@@ -16,11 +16,15 @@ public class ModedItems {
     public static final DeferredItem<Item> MOMSLIPSTICK = ITEMS.register("momslipstick",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> SULFURDUST = ITEMS.register("sulfurdust",
-            () -> new AcidTearsItems(new Item.Properties(),100,75));
+            () -> new AcidTearsItems(new Item.Properties(),25,25));
     public static final DeferredItem<Item> SULFURROCK = ITEMS.register("sulfurrock",
-            () -> new AcidTearsItems(new Item.Properties(),200,150));
+            () -> new AcidTearsItems(new Item.Properties(),50,50));
     public static final DeferredItem<Item> BOMB = ITEMS.register("bomb",
             () -> new BombItem(new Item.Properties().stacksTo(100)));
+    public static final DeferredItem<Item> SULFURICACID = ITEMS.register("sulfuricacid",
+            () -> new AcidTearsItems(new Item.Properties(),100,100));
+    public static final DeferredItem<Item> SULFURICDUST = ITEMS.register("sulfuricdust",
+            () -> new AcidTearsItems(new Item.Properties(), 200, 200));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

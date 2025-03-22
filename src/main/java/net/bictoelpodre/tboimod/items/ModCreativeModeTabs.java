@@ -22,6 +22,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModedItems.MOMSLIPSTICK);
                         output.accept(ModedItems.ABAROFSOAP);
+                        output.accept(ModedItems.SULFURICACID);
 
                     }).build());
 
@@ -31,6 +32,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.thebindingofisaacmod.tboifloorstab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.BASEMENTFLOOR);
+                        output.accept(ModBlocks.BASEMENTROCK);
 
                     }).build());
 

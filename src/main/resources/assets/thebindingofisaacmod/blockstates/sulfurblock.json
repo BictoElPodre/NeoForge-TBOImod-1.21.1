@@ -1,7 +1,8 @@
 {
   "variants": {
-    "": {
-      "model": "thebindingofisaacmod:block/sulfurblock"
-    }
+    "wear_level=0": {"model": "thebindingofisaacmod:block/sulfurblock0"},
+    "wear_level=1": {"model": "thebindingofisaacmod:block/sulfurblock1"},
+    "wear_level=2": {"model": "thebindingofisaacmod:block/sulfurblock2"},
+    "wear_level=3": {"model": "thebindingofisaacmod:block/sulfurblock3"}
   }
 }
