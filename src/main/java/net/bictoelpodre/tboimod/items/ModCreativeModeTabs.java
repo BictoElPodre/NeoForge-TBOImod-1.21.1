@@ -23,12 +23,23 @@ public class ModCreativeModeTabs {
                         output.accept(ModedItems.MOMSLIPSTICK);
                         output.accept(ModedItems.ABAROFSOAP);
                         output.accept(ModedItems.SULFURICACID);
+                        output.accept(ModedItems.BREAKFAST);
+                        output.accept(ModedItems.FIREMIND);
+
+                    }).build());
+
+    public static final Supplier<CreativeModeTab> TBOIACTIVEITEMSTAB = CREATIVE_MODE_TAB.register("tboiactiveitemstab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModedItems.SULFUR.get()))
+                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(TheBindingOfIsaacMod.MOD_ID, "tboipassiveitemstab"))
+                    .title(Component.translatable("creativetab.thebindingofisaacmod.tboiactiveitemstab"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModedItems.SULFUR);
 
                     }).build());
 
     public static final Supplier<CreativeModeTab> TBOIFLOORSTAB = CREATIVE_MODE_TAB.register("tboifloorstab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.BASEMENTFLOOR.get()))
-                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(TheBindingOfIsaacMod.MOD_ID, "tboipassiveitemstab"))
+                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(TheBindingOfIsaacMod.MOD_ID, "tboiactiveitemstab"))
                     .title(Component.translatable("creativetab.thebindingofisaacmod.tboifloorstab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.BASEMENTFLOOR);

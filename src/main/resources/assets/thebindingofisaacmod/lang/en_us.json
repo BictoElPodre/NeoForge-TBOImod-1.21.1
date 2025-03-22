@@ -6,6 +6,9 @@
   "item.thebindingofisaacmod.bomb": "Bomb",
   "item.thebindingofisaacmod.sulfuricacid": "Sulfuric Acid",
   "item.thebindingofisaacmod.sulfuricdust": "Sulfuric Dust",
+  "item.thebindingofisaacmod.sulfur": "Sulfur",
+  "item.thebindingofisaacmod.breakfast": "Breakfast",
+  "item.thebindingofisaacmod.firemind": "Firemind",
 
 
   "block.thebindingofisaacmod.basementfloor": "Basement Floor",
@@ -14,5 +17,6 @@
 
   "creativetab.thebindingofisaacmod.tboipassiveitemstab": "TBOI Passive Items",
   "creativetab.thebindingofisaacmod.tboifloorstab": "TBOI Floors Blocks",
-  "creativetab.thebindingofisaacmod.tboipickupstab": "TBOI Pickups"
+  "creativetab.thebindingofisaacmod.tboipickupstab": "TBOI Pickups",
+  "creativetab.thebindingofisaacmod.tboiactiveitemstab": "TBOI Active Items"
 }

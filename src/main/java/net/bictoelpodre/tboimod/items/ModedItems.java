@@ -15,6 +15,12 @@ public class ModedItems {
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> MOMSLIPSTICK = ITEMS.register("momslipstick",
             () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> FIREMIND = ITEMS.register("firemind",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> SULFUR = ITEMS.register("sulfur",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> BREAKFAST = ITEMS.register("breakfast",
+            () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> SULFURDUST = ITEMS.register("sulfurdust",
             () -> new AcidTearsItems(new Item.Properties(),25,25));
     public static final DeferredItem<Item> SULFURROCK = ITEMS.register("sulfurrock",
