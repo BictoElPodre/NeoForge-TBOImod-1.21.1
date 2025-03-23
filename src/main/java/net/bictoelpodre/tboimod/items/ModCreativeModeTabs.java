@@ -24,6 +24,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModedItems.ABAROFSOAP);
                         output.accept(ModedItems.SULFURICACID);
                         output.accept(ModedItems.BREAKFAST);
+                        output.accept(ModedItems.ROTTENMEAT);
                         output.accept(ModedItems.FIREMIND);
 
                     }).build());

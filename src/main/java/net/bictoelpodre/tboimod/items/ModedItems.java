@@ -3,6 +3,8 @@ package net.bictoelpodre.tboimod.items;
 import net.bictoelpodre.tboimod.TheBindingOfIsaacMod;
 import net.bictoelpodre.tboimod.items.custom.AcidTearsItems;
 import net.bictoelpodre.tboimod.items.custom.BombItem;
+import net.bictoelpodre.tboimod.items.custom.FoodIsDrink;
+import net.bictoelpodre.tboimod.items.custom.FuelItems;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -16,11 +18,11 @@ public class ModedItems {
     public static final DeferredItem<Item> MOMSLIPSTICK = ITEMS.register("momslipstick",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> FIREMIND = ITEMS.register("firemind",
-            () -> new Item(new Item.Properties()));
+            () -> new FuelItems(new Item.Properties(),Integer.MAX_VALUE));
     public static final DeferredItem<Item> SULFUR = ITEMS.register("sulfur",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> BREAKFAST = ITEMS.register("breakfast",
-            () -> new Item(new Item.Properties()));
+            () -> new FoodIsDrink(new Item.Properties().food(ModFoodProperties.BREAKFAST)));
     public static final DeferredItem<Item> SULFURDUST = ITEMS.register("sulfurdust",
             () -> new AcidTearsItems(new Item.Properties(),25,25));
     public static final DeferredItem<Item> SULFURROCK = ITEMS.register("sulfurrock",
@@ -31,9 +33,10 @@ public class ModedItems {
             () -> new AcidTearsItems(new Item.Properties(),100,100));
     public static final DeferredItem<Item> SULFURICDUST = ITEMS.register("sulfuricdust",
             () -> new AcidTearsItems(new Item.Properties(), 200, 200));
+    public static final DeferredItem<Item> ROTTENMEAT = ITEMS.register("rottenmeat",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.ROTTENMEAT)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
-
 }
