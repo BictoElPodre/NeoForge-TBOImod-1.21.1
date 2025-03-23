@@ -11,7 +11,6 @@
   "item.thebindingofisaacmod.rottenmeat": "Rotten Meat",
   "item.thebindingofisaacmod.firemind": "Firemind",
 
-
   "block.thebindingofisaacmod.basementfloor": "Basement Floor",
   "block.thebindingofisaacmod.sulfurblock": "Sulfur Block",
   "block.thebindingofisaacmod.basementrock": "Basement Rock",
@@ -19,5 +18,11 @@
   "creativetab.thebindingofisaacmod.tboipassiveitemstab": "TBOI Passive Items",
   "creativetab.thebindingofisaacmod.tboifloorstab": "TBOI Floors Blocks",
   "creativetab.thebindingofisaacmod.tboipickupstab": "TBOI Pickups",
-  "creativetab.thebindingofisaacmod.tboiactiveitemstab": "TBOI Active Items"
+  "creativetab.thebindingofisaacmod.tboiactiveitemstab": "TBOI Active Items",
+
+  "tooltip.thebindingofisaacmod.shift.tooltip": "Press LFTShift for detailed info...",
+  "tooltip.thebindingofisaacmod.sulfurblockshiftdown.tooltip": "Use this block to obtain infinite Sulfur Dust or Sulfuric Dust with a Water Bottle",
+  "tooltip.thebindingofisaacmod.sulfurblock.tooltip": "Use safety glasses when standing on this block to protect your eyes",
+  "tooltip.thebindingofisaacmod.basementrock.tooltip": "Seems like a bomb could break it",
+  "tooltip.thebindingofisaacmod.bombitem.tooltip": "Make your way trough the floors"
 }

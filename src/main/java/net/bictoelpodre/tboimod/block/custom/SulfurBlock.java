@@ -1,17 +1,25 @@
 package net.bictoelpodre.tboimod.block.custom;
 
 import net.bictoelpodre.tboimod.items.ModedItems;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.particles.DustParticleOptions;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.alchemy.PotionContents;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.Level;
@@ -20,6 +28,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.storage.loot.LootParams;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import org.joml.Vector3f;
 
@@ -51,8 +60,7 @@ public class SulfurBlock extends Block {
         return Collections.emptyList();
     }
 
-    @Override
-    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         int currentWear = state.getValue(WEAR_LEVEL);
 
         if (!level.isClientSide) {
@@ -61,18 +69,12 @@ public class SulfurBlock extends Block {
 
                 player.addItem(new ItemStack(ModedItems.SULFURICDUST.get()));
 
-                ((ServerLevel) level).sendParticles(new DustParticleOptions(new Vector3f(1.0F, 1.0F, 0.0F), 1F),
-                        pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
-                        50,
-                        0.3, 0.3, 0.3,
-                        0.1);
-
                 wearCalcul = wearCalcul + 9;
 
                 if (!player.isCreative()) {
                     stack.shrink(1);
                 }
-            } else if (new Random().nextFloat() < 0.5f) {
+            } else if (new Random().nextFloat() < 0.1f) {
                 Block.popResource(level, pos, new ItemStack(ModedItems.SULFURDUST.get()));
 
                 level.playSound(null, pos, SoundEvents.BRUSH_SAND_COMPLETED, SoundSource.BLOCKS, 1.0F, 1.0F);
@@ -96,7 +98,68 @@ public class SulfurBlock extends Block {
 
                 level.playSound(null, pos, SoundEvents.SAND_BREAK, SoundSource.BLOCKS, 1.0F, 1.0F);
             }
+            ((ServerLevel) level).sendParticles(new DustParticleOptions(new Vector3f(1.0F, 1.0F, 0.0F), 1F),
+                    pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
+                    50,
+                    0.3, 0.3, 0.3,
+                    0.1);
         }
         return ItemInteractionResult.SUCCESS;
+    }
+
+    @Override
+    public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity) {
+
+        if (entity instanceof Player player) {
+
+            if (!(entity.isSteppingCarefully())) {
+                spawnParticles(level, player);
+                applyBlindness(level, player);
+
+            }
+        }
+        super.stepOn(level, pos, state, entity);
+    }
+
+    private void applyBlindness(Level level, Player player) {
+
+        if (!level.isClientSide()) {
+            player.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 40, 0));
+
+        }
+    }
+
+    private void spawnParticles(Level level, Player player) {
+
+        if (!level.isClientSide()) {
+            return;
+        }
+
+        for (int i = 0; i < 20; i++) {
+
+            double offsetX = (level.random.nextDouble() - 0.5) * 2.5;
+            double offsetY = (level.random.nextDouble() - 0.5) * 4;
+            double offsetZ = (level.random.nextDouble() - 0.5) * 2.5;
+
+            level.addParticle(
+                    new DustParticleOptions(new Vector3f(1.0F, 1.0F, 0.0F), 1), // Polvo amarillo
+                    player.getX() + offsetX, player.getY() + offsetY, player.getZ() + offsetZ,
+                    0.0, 0.0, 0.0);
+        }
+    }
+
+    @Override
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+
+        if(Screen.hasShiftDown()) {
+            tooltipComponents.add(Component.translatable("tooltip.thebindingofisaacmod.sulfurblockshiftdown.tooltip"));
+        }
+
+        else {
+            tooltipComponents.add(Component.translatable("tooltip.thebindingofisaacmod.sulfurblock.tooltip"));
+            tooltipComponents.add(Component.translatable("tooltip.thebindingofisaacmod.shift.tooltip"));
+
+            super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+        }
     }
 }

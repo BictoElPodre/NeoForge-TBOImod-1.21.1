@@ -29,12 +29,15 @@ public class AcidTearsItems extends Item {
 
         if (!level.isClientSide) {
             player.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, blindnessDuration, 0));
+
             level.playSound(null,player.getX(),player.getY(),player.getZ(),
                     SoundEvents.SAND_BREAK, player.getSoundSource(),1.0F,0.5F);
+
             player.getCooldowns().addCooldown(ModedItems.SULFURICDUST.get(), cooldownDuration);
             player.getCooldowns().addCooldown(ModedItems.SULFURDUST.get(), cooldownDuration);
             player.getCooldowns().addCooldown(ModedItems.SULFURROCK.get(), cooldownDuration);
             player.getCooldowns().addCooldown(ModedItems.SULFURICACID.get(), cooldownDuration);
+
             if (!player.isCreative()) {
                 itemStack.shrink(1);
             }
