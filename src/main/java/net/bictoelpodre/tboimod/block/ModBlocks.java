@@ -27,7 +27,7 @@ public class ModBlocks {
                     .strength(-1F).requiresCorrectToolForDrops().sound(SoundType.MUD_BRICKS)));
     public static final DeferredBlock<Block> SULFURBLOCK = registerBlock("sulfurblock",
             () -> new SulfurBlock(BlockBehaviour.Properties.of()
-                    .strength(1F).requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK)));
+                    .strength(1F).requiresCorrectToolForDrops().sound(SoundType.SAND)));
     public static final DeferredBlock<Block> BASEMENTROCK = registerBlock("basementrock",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(-1F).requiresCorrectToolForDrops().sound(SoundType.MUD_BRICKS)) {
