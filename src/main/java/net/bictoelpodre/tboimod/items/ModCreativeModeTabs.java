@@ -1,5 +1,6 @@
 package net.bictoelpodre.tboimod.items;
 
+import com.mojang.blaze3d.platform.Monitor;
 import net.bictoelpodre.tboimod.TheBindingOfIsaacMod;
 import net.bictoelpodre.tboimod.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
@@ -44,6 +45,15 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.thebindingofisaacmod.tboifloorstab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.BASEMENTFLOOR);
+                        output.accept(ModBlocks.BASEMENTFLOOR_STAIRS);
+                        output.accept(ModBlocks.BASEMENTFLOOR_SLAB);
+                        output.accept(ModBlocks.BASEMENTFLOOR_WALL);
+                        output.accept(ModBlocks.BASEMENTFLOOR_FENCE_GATE);
+                        output.accept(ModBlocks.BASEMENTFLOOR_FENCE);
+                        output.accept(ModBlocks.BASEMENTFLOOR_BUTTON);
+                        output.accept(ModBlocks.BASEMENTFLOOR_PRESSURE_PLATE);
+                        output.accept(ModBlocks.BASEMENTFLOOR_DOOR);
+                        output.accept(ModBlocks.BASEMENTFLOOR_TRAPDOOR);
                         output.accept(ModBlocks.BASEMENTROCK);
 
                     }).build());

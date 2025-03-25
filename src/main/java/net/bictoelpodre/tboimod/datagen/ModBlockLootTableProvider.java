@@ -18,8 +18,20 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(ModBlocks.BASEMENTFLOOR.get());
+        dropSelf(ModBlocks.BASEMENTFLOOR_STAIRS.get());
+        dropSelf(ModBlocks.BASEMENTFLOOR_BUTTON.get());
+        dropSelf(ModBlocks.BASEMENTFLOOR_FENCE.get());
+        dropSelf(ModBlocks.BASEMENTFLOOR_FENCE_GATE.get());
+        dropSelf(ModBlocks.BASEMENTFLOOR_WALL.get());
+        dropSelf(ModBlocks.BASEMENTFLOOR_TRAPDOOR.get());
+        dropSelf(ModBlocks.BASEMENTFLOOR_PRESSURE_PLATE.get());
+        add(ModBlocks.BASEMENTFLOOR_DOOR.get(),
+                block -> createDoorTable(ModBlocks.BASEMENTFLOOR_DOOR.get()));
+        add(ModBlocks.BASEMENTFLOOR_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.BASEMENTFLOOR_SLAB.get()));
         dropSelf(ModBlocks.BASEMENTROCK.get());
         dropSelf(ModBlocks.SULFURBLOCK.get());
+
 
     }
 

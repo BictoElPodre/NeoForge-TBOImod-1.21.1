@@ -1,10 +1,12 @@
 package net.bictoelpodre.tboimod;
 
 import net.bictoelpodre.tboimod.block.ModBlocks;
+import net.bictoelpodre.tboimod.client.ModKeybinds;
+import net.bictoelpodre.tboimod.component.ModDataComponents;
 import net.bictoelpodre.tboimod.items.ModCreativeModeTabs;
 import net.bictoelpodre.tboimod.items.ModedItems;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -44,13 +46,16 @@ public class TheBindingOfIsaacMod {
         ModedItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ModDataComponents.register(modEventBus);
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event) {
+    private void commonSetup(final FMLCommonSetupEvent commonSetupEvent) {
 
     }
 
@@ -76,8 +81,8 @@ public class TheBindingOfIsaacMod {
     @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event) {
-
+        public static void onRegisterKeyMappings(RegisterKeyMappingsEvent event) {
+            ModKeybinds.register(event);
         }
     }
 }

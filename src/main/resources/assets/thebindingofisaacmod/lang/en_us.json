@@ -12,6 +12,15 @@
   "item.thebindingofisaacmod.firemind": "Firemind",
 
   "block.thebindingofisaacmod.basementfloor": "Basement Floor",
+  "block.thebindingofisaacmod.basementfloor_slab": "Basement Floor Slab",
+  "block.thebindingofisaacmod.basementfloor_stairs": "Basement Floor Stairs",
+  "block.thebindingofisaacmod.basementfloor_button": "Basement Floor Button",
+  "block.thebindingofisaacmod.basementfloor_fence": "Basement Floor Fence",
+  "block.thebindingofisaacmod.basementfloor_fence_gate": "Basement Floor Fence Gate",
+  "block.thebindingofisaacmod.basementfloor_wall": "Basement Floor Wall",
+  "block.thebindingofisaacmod.basementfloor_pressure_plate": "Basement Floor Pressure Plate",
+  "block.thebindingofisaacmod.basementfloor_trapdoor": "Basement Floor Trapdoor",
+  "block.thebindingofisaacmod.basementfloor_door": "Basement Floor Door",
   "block.thebindingofisaacmod.sulfurblock": "Sulfur Block",
   "block.thebindingofisaacmod.basementrock": "Basement Rock",
 
@@ -24,5 +33,8 @@
   "tooltip.thebindingofisaacmod.sulfurblockshiftdown.tooltip": "Use this block to obtain infinite Sulfur Dust or Sulfuric Dust with a Water Bottle",
   "tooltip.thebindingofisaacmod.sulfurblock.tooltip": "Use safety glasses when standing on this block to protect your eyes",
   "tooltip.thebindingofisaacmod.basementrock.tooltip": "Seems like a bomb could break it",
-  "tooltip.thebindingofisaacmod.bombitem.tooltip": "Make your way trough the floors"
+  "tooltip.thebindingofisaacmod.bombitem.tooltip": "Make your way trough the floors",
+
+  "key.categories.thebindingofisaacmod": "TBOImod",
+  "key.thebindingofisaacmod.shoot_snowball": "Shoot tears"
 }

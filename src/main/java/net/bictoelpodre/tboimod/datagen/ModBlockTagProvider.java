@@ -26,5 +26,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.SULFURBLOCK.get());
 
+        tag(BlockTags.FENCES).add(ModBlocks.BASEMENTFLOOR_FENCE.get());
+        tag(BlockTags.FENCE_GATES).add(ModBlocks.BASEMENTFLOOR_FENCE_GATE.get());
+        tag(BlockTags.WALLS).add(ModBlocks.BASEMENTFLOOR_WALL.get());
+
     }
 }
