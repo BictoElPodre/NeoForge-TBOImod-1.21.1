@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "thebindingofisaacmod:block/basementfloor",
+    "side": "thebindingofisaacmod:block/basementfloor",
+    "top": "thebindingofisaacmod:block/basementfloor"
+  }
+}

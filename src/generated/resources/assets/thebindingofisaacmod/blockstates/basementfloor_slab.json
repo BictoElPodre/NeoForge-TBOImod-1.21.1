@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "thebindingofisaacmod:block/basementfloor_slab"
+    },
+    "type=double": {
+      "model": "thebindingofisaacmod:block/basementfloor"
+    },
+    "type=top": {
+      "model": "thebindingofisaacmod:block/basementfloor_slab_top"
+    }
+  }
+}
