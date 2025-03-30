@@ -16,6 +16,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.concurrent.CompletableFuture;
 
 public class ModItemTagProvider extends ItemTagsProvider {
+
     public ModItemTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, CompletableFuture<TagLookup<Block>> blockTags, @Nullable ExistingFileHelper existingFileHelper) {
         super(output, lookupProvider, blockTags, TheBindingOfIsaacMod.MOD_ID, existingFileHelper);
     }
@@ -30,5 +31,11 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
         tag(ItemTags.PICKAXES)
                 .add(ModedItems.DATAMINER.get());
+
+        tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModedItems.MOMSBRA.get())
+                .add(ModedItems.MOMSUNDERWEAR.get())
+                .add(ModedItems.MOMSHEELS.get())
+                .add(ModedItems.MOMSWIG.get());
     }
 }

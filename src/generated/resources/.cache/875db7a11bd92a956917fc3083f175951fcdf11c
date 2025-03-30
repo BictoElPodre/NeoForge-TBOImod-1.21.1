@@ -1,4 +1,4 @@
-// 1.21.1	2025-03-30T01:54:37.7598877	Item Models: thebindingofisaacmod
+// 1.21.1	2025-03-30T17:50:17.5725334	Item Models: thebindingofisaacmod
 20c1266fb06d0ec98683930867d1db9340817092 assets/thebindingofisaacmod/models/item/abarofsoap.json
 d5eb8a08826fb2a2d0586a985742d96cbd7d89c1 assets/thebindingofisaacmod/models/item/basementfloor_button.json
 50bd5f7095ea82ece958244c26b45a2490b1187f assets/thebindingofisaacmod/models/item/basementfloor_door.json
@@ -8,7 +8,12 @@ b4f1e8862f92fb63bb0046cb7fe86e003285493f assets/thebindingofisaacmod/models/item
 41a76617fa81385c8dff92b0f91db09a9404d59a assets/thebindingofisaacmod/models/item/breakfast.json
 47fbcf68600fe4fb2530c4f602a149c8580a3edf assets/thebindingofisaacmod/models/item/dataminer.json
 06247a14524f00f0fae16ec75e1d5c8d8f0be1e7 assets/thebindingofisaacmod/models/item/firemind.json
+d603d575af202470a2829fedfda9f3520d89a940 assets/thebindingofisaacmod/models/item/momsbra.json
+45d8515502beae6002f25a32b5aec019b20a3d9c assets/thebindingofisaacmod/models/item/momsessence.json
+524a7325ec92d4fad2040bbd4e85b9805ea56d31 assets/thebindingofisaacmod/models/item/momsheels.json
 014f415a2ca3aeee905dac9acdff62daa2168fac assets/thebindingofisaacmod/models/item/momslipstick.json
+12e28c75db418126c33e860fbdcd03602170299c assets/thebindingofisaacmod/models/item/momsunderwear.json
+f1b679ec59868c2665ebfcb20c316eb33a6687bb assets/thebindingofisaacmod/models/item/momswig.json
 c0aa295c737bdaf5d1639fccb2d0fb607c3ae8a2 assets/thebindingofisaacmod/models/item/rottenmeat.json
 4421c71c2f751fa605244a2e76d9d2fa6185fd0a assets/thebindingofisaacmod/models/item/sulfur.json
 f5c899f03c339b30ef2d74e2dd0c7b290d9cbcbc assets/thebindingofisaacmod/models/item/sulfurdust.json

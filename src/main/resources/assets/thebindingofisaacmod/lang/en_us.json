@@ -11,6 +11,11 @@
   "item.thebindingofisaacmod.rottenmeat": "Rotten Meat",
   "item.thebindingofisaacmod.firemind": "Firemind",
   "item.thebindingofisaacmod.dataminer": "Dataminer",
+  "item.thebindingofisaacmod.momsessence": "Mom's Essence",
+  "item.thebindingofisaacmod.momsunderwear": "Mom's Underwear",
+  "item.thebindingofisaacmod.momsheels": "Mom's Heels",
+  "item.thebindingofisaacmod.momswig": "Mom's Wig",
+  "item.thebindingofisaacmod.momsbra": "Mom's Bra",
 
   "block.thebindingofisaacmod.basementfloor": "Basement Floor",
   "block.thebindingofisaacmod.basementfloor_slab": "Basement Floor Slab",
@@ -29,6 +34,7 @@
   "creativetab.thebindingofisaacmod.tboifloorstab": "TBOI Floors Blocks",
   "creativetab.thebindingofisaacmod.tboipickupstab": "TBOI Pickups",
   "creativetab.thebindingofisaacmod.tboiactiveitemstab": "TBOI Active Items",
+  "creativetab.thebindingofisaacmod.tboimiscellaneoustab": "TBOI Miscellaneous",
 
   "tooltip.thebindingofisaacmod.shift.tooltip": "Press LFTShift for detailed info...",
   "tooltip.thebindingofisaacmod.sulfurblockshiftdown.tooltip": "Use this block to obtain infinite Sulfur Dust or Sulfuric Dust with a Water Bottle",

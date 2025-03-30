@@ -27,6 +27,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModedItems.BREAKFAST);
                         output.accept(ModedItems.ROTTENMEAT);
                         output.accept(ModedItems.FIREMIND);
+                        output.accept(ModedItems.MOMSBRA);
+                        output.accept(ModedItems.MOMSHEELS);
+                        output.accept(ModedItems.MOMSWIG);
+                        output.accept(ModedItems.MOMSUNDERWEAR);
 
                     }).build());
 
@@ -65,6 +69,15 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.thebindingofisaacmod.tboipickupstab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModedItems.BOMB);
+
+                    }).build());
+
+    public static final Supplier<CreativeModeTab> TBOIMISCELLANEOUS = CREATIVE_MODE_TAB.register("tboimiscellaneoustab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModedItems.MOMSESSENCE.get()))
+                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(TheBindingOfIsaacMod.MOD_ID, "tboipickupstab"))
+                    .title(Component.translatable(("creativetab.thebindingofisaacmod.tboimiscellaneoustab")))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModedItems.MOMSESSENCE);
 
                     }).build());
 

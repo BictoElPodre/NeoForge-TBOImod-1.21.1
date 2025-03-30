@@ -25,6 +25,32 @@ public class ModRecipeProvider extends RecipeProvider {
     @Override
     protected void buildRecipes(RecipeOutput recipeOutput) {
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModedItems.MOMSBRA.get())
+                .pattern("M M")
+                .pattern("MMM")
+                .define('M', ModedItems.MOMSESSENCE.get())
+                .unlockedBy("has_momsessence",has(ModedItems.MOMSESSENCE))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModedItems.MOMSHEELS.get())
+                .pattern("M M")
+                .pattern("M M")
+                .pattern("M M")
+                .define('M', ModedItems.MOMSESSENCE.get())
+                .unlockedBy("has_momsessence",has(ModedItems.MOMSESSENCE))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModedItems.MOMSUNDERWEAR.get())
+                .pattern("M M")
+                .pattern(" M ")
+                .define('M', ModedItems.MOMSESSENCE.get())
+                .unlockedBy("has_momsessence",has(ModedItems.MOMSESSENCE))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModedItems.MOMSWIG.get())
+                .pattern("MMM")
+                .pattern("M M")
+                .define('M', ModedItems.MOMSESSENCE.get())
+                .unlockedBy("has_momsessence",has(ModedItems.MOMSESSENCE))
+                .save(recipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SULFURBLOCK.get())
                 .pattern("SSS")
                 .pattern("SSS")

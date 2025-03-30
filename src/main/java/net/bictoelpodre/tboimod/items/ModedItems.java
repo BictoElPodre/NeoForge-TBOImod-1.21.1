@@ -2,6 +2,7 @@ package net.bictoelpodre.tboimod.items;
 
 import net.bictoelpodre.tboimod.TheBindingOfIsaacMod;
 import net.bictoelpodre.tboimod.items.custom.*;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PickaxeItem;
 import net.neoforged.bus.api.IEventBus;
@@ -25,6 +26,18 @@ public class ModedItems {
             () -> new AcidTearsItems(new Item.Properties(),100,100));
     public static final DeferredItem<Item> SULFUR = ITEMS.register("sulfur",
             () -> new Item(new Item.Properties()));
+    public static final DeferredItem<ArmorItem> MOMSBRA = ITEMS.register("momsbra",
+            () -> new ArmorItem(ModArmourMaterials.MOMS_ESSENCE_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties()));
+    public static final DeferredItem<ArmorItem> MOMSUNDERWEAR = ITEMS.register("momsunderwear",
+            () -> new ArmorItem(ModArmourMaterials.MOMS_ESSENCE_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties()));
+    public static final DeferredItem<ArmorItem> MOMSWIG = ITEMS.register("momswig",
+            () -> new ArmorItem(ModArmourMaterials.MOMS_ESSENCE_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties()));
+    public static final DeferredItem<ArmorItem> MOMSHEELS = ITEMS.register("momsheels",
+            () -> new ArmorItem(ModArmourMaterials.MOMS_ESSENCE_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties()));
 
     public static final DeferredItem<Item> SULFURDUST = ITEMS.register("sulfurdust",
             () -> new AcidTearsItems(new Item.Properties(),25,25));
@@ -32,6 +45,9 @@ public class ModedItems {
             () -> new AcidTearsItems(new Item.Properties(),50,50));
     public static final DeferredItem<Item> SULFURICDUST = ITEMS.register("sulfuricdust",
             () -> new AcidTearsItems(new Item.Properties(), 200, 200));
+
+    public static final DeferredItem<Item> MOMSESSENCE = ITEMS.register("momsessence",
+            () -> new Item(new Item.Properties()));
 
     public static final DeferredItem<Item> BOMB = ITEMS.register("bomb",
             () -> new BombItem(new Item.Properties().stacksTo(100)));
