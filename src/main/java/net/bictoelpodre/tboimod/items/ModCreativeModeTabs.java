@@ -36,6 +36,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.thebindingofisaacmod.tboiactiveitemstab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModedItems.SULFUR);
+                        output.accept(ModedItems.DATAMINER);
 
                     }).build());
 

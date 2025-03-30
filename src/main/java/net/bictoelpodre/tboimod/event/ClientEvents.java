@@ -1,8 +1,8 @@
 package net.bictoelpodre.tboimod.event;
 
 import net.bictoelpodre.tboimod.TheBindingOfIsaacMod;
-import net.bictoelpodre.tboimod.network.PayloadsRegistrar;
 import net.bictoelpodre.tboimod.client.key.KeyBinding;
+import net.bictoelpodre.tboimod.network.TearsHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
 import net.neoforged.api.distmarker.Dist;
@@ -17,9 +17,7 @@ public class ClientEvents {
     @SubscribeEvent
     public static void onKeyInput(InputEvent.Key event) {
         if(KeyBinding.TEARS_KEY.consumeClick()) {
-
-            PacketDistributor.sendToServer(new PayloadsRegistrar.OnKeyBind(true));
-            Minecraft.getInstance().player.sendSystemMessage(Component.literal("C pressed"));
+            PacketDistributor.sendToServer(new TearsHandler.IsTearsKeyPressed(true));
         }
     }
 }

@@ -6,9 +6,11 @@ import net.bictoelpodre.tboimod.items.ModedItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredItem;
 
 public class ModItemModelProvider extends ItemModelProvider {
 
@@ -40,6 +42,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.BASEMENTFLOOR_WALL, ModBlocks.BASEMENTFLOOR);
 
         basicItem(ModBlocks.BASEMENTFLOOR_DOOR.asItem());
+
+        handhelditem(ModedItems.DATAMINER);
     }
 
     public void buttonItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
@@ -58,5 +62,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         this.withExistingParent(block.getId().getPath(), mcLoc("block/wall_inventory"))
                 .texture("wall",  ResourceLocation.fromNamespaceAndPath(TheBindingOfIsaacMod.MOD_ID,
                         "block/" + baseBlock.getId().getPath()));
+    }
+
+    private ItemModelBuilder handhelditem(DeferredItem<?> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/handheld")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(TheBindingOfIsaacMod.MOD_ID, "item/" + item.getId().getPath()));
     }
 }

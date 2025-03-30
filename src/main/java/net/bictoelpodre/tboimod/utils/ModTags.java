@@ -11,6 +11,10 @@ import net.minecraft.world.level.block.Block;
 public class ModTags {
     public static class Blocks {
 
+        public static final TagKey<Block> NEEDS_DATA_MINER = createTagKey("needs_dataminer");
+        public static final TagKey<Block> INCORRECT_FOR_DATAMINER = createTagKey("incorrect_for_dataminer");
+
+
         private static TagKey<Block> createTagKey(String name) {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(TheBindingOfIsaacMod.MOD_ID, name));
         }

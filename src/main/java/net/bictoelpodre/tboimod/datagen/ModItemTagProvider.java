@@ -7,6 +7,7 @@ import net.bictoelpodre.tboimod.utils.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -26,5 +27,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModedItems.SULFURROCK.get())
                 .add(ModedItems.SULFURICACID.get())
                 .add(Item.byBlock(ModBlocks.SULFURBLOCK.get()));
+
+        tag(ItemTags.PICKAXES)
+                .add(ModedItems.DATAMINER.get());
     }
 }

@@ -1,6 +1,8 @@
-// 1.21.1	2025-03-26T12:49:49.6895885	Tags for minecraft:block mod id thebindingofisaacmod
+// 1.21.1	2025-03-30T01:54:37.7618899	Tags for minecraft:block mod id thebindingofisaacmod
 a4c2c2656e7bff87a4f90153be90dfba2de2293b data/minecraft/tags/block/fences.json
 7cef62b9248a5d57e17244f6caaf19c58ab91849 data/minecraft/tags/block/fence_gates.json
 93d8628200ec932c409eea3ccb1a801a4fa7c81d data/minecraft/tags/block/mineable/pickaxe.json
 44454492d6e58cc85ee33d1dfe5d6b2cabaf10fc data/minecraft/tags/block/needs_iron_tool.json
 a9086e42a4b3463938136a602c51b5d318892046 data/minecraft/tags/block/walls.json
+ed8fd66aa3b17521a2eff009780756c52577473f data/thebindingofisaacmod/tags/block/incorrect_for_dataminer.json
+b96aedb72408683f009875ee724477a843095987 data/thebindingofisaacmod/tags/block/needs_dataminer.json

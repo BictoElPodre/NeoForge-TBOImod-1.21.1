@@ -28,33 +28,36 @@ public class BombItem extends Item {
 
     @Override
     public InteractionResult useOn(UseOnContext context) {
+
         Level level = context.getLevel();
         BlockPos blockPos = context.getClickedPos();
         Player player = context.getPlayer();
         BlockState blockState = level.getBlockState(blockPos);
 
-        if(blockState.is(ModBlocks.BASEMENTROCK.get())) {
-            if (!level.isClientSide) {
-                level.playSound(null,player.getX(),player.getY(),player.getZ(),
-                        SoundEvents.GENERIC_EXPLODE, player.getSoundSource(),1.0F,0.5F);
-                ((ServerLevel) level).sendParticles(new BlockParticleOption(ParticleTypes.BLOCK, blockState),
-                        blockPos.getX() + 0.5, blockPos.getY() + 0.5, blockPos.getZ() + 0.5,
-                        50,
-                        0.3, 0.3, 0.3,
-                        0.1);
-                player.getCooldowns().addCooldown(this, 20);
-                level.removeBlock(blockPos,false);
-                context.getItemInHand().set(BLOCK_STATE, null);
-            }
-            return InteractionResult.SUCCESS;
-        }
         if (!level.isClientSide) {
-            level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.TNT_PRIMED, player.getSoundSource(),1.0F, 0.5F);
+            level.playSound(null, player.getX(), player.getY(), player.getZ(),
+                    SoundEvents.GENERIC_EXPLODE, player.getSoundSource(), 1.0F, 0.5F);
+            int radius = 2;
+            for (int x = -radius; x <= radius; x++) {
+                for (int z = -radius; z <= radius; z++) {
+                    if (Math.sqrt(x * x + z * z) <= radius + 0.5) {
+                        BlockPos newPos = blockPos.offset(x, 0, z);
+                        BlockState newState = level.getBlockState(newPos);
+
+                        if(newState.is(ModBlocks.BASEMENTROCK.get())) {
+                            ((ServerLevel) level).sendParticles(new BlockParticleOption(ParticleTypes.BLOCK, newState),
+                                    newPos.getX() + 0.5, newPos.getY() + 0.5, newPos.getZ() + 0.5,
+                                    50, 0.3, 0.3, 0.3, 0.1);
+
+                            level.removeBlock(newPos, false);
+                        }
+                    }
+                }
+            }
+            player.getCooldowns().addCooldown(this, 20);
+            context.getItemInHand().set(BLOCK_STATE, null);
         }
-        context.getItemInHand().set(BLOCK_STATE, blockState);
-
-        return super.useOn(context);
-
+        return InteractionResult.SUCCESS;
     }
 
     @Override

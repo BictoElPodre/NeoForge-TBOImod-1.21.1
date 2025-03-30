@@ -1,4 +1,4 @@
-// 1.21.1	2025-03-26T12:49:49.6885898	Item Models: thebindingofisaacmod
+// 1.21.1	2025-03-30T01:54:37.7598877	Item Models: thebindingofisaacmod
 20c1266fb06d0ec98683930867d1db9340817092 assets/thebindingofisaacmod/models/item/abarofsoap.json
 d5eb8a08826fb2a2d0586a985742d96cbd7d89c1 assets/thebindingofisaacmod/models/item/basementfloor_button.json
 50bd5f7095ea82ece958244c26b45a2490b1187f assets/thebindingofisaacmod/models/item/basementfloor_door.json
@@ -6,6 +6,7 @@ d5eb8a08826fb2a2d0586a985742d96cbd7d89c1 assets/thebindingofisaacmod/models/item
 b4f1e8862f92fb63bb0046cb7fe86e003285493f assets/thebindingofisaacmod/models/item/basementfloor_wall.json
 5a4caa97d3f9226a534a446d17aa62dc7fefeb6f assets/thebindingofisaacmod/models/item/bomb.json
 41a76617fa81385c8dff92b0f91db09a9404d59a assets/thebindingofisaacmod/models/item/breakfast.json
+47fbcf68600fe4fb2530c4f602a149c8580a3edf assets/thebindingofisaacmod/models/item/dataminer.json
 06247a14524f00f0fae16ec75e1d5c8d8f0be1e7 assets/thebindingofisaacmod/models/item/firemind.json
 014f415a2ca3aeee905dac9acdff62daa2168fac assets/thebindingofisaacmod/models/item/momslipstick.json
 c0aa295c737bdaf5d1639fccb2d0fb607c3ae8a2 assets/thebindingofisaacmod/models/item/rottenmeat.json
