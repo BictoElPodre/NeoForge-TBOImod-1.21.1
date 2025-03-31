@@ -27,16 +27,16 @@ public class ModedItems {
     public static final DeferredItem<Item> SULFUR = ITEMS.register("sulfur",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<ArmorItem> MOMSBRA = ITEMS.register("momsbra",
-            () -> new ArmorItem(ModArmourMaterials.MOMS_ESSENCE_MATERIAL, ArmorItem.Type.CHESTPLATE,
+            () -> new ModArmorItem(ModArmorMaterials.MOMS_ESSENCE_MATERIAL, ArmorItem.Type.CHESTPLATE,
                     new Item.Properties()));
     public static final DeferredItem<ArmorItem> MOMSUNDERWEAR = ITEMS.register("momsunderwear",
-            () -> new ArmorItem(ModArmourMaterials.MOMS_ESSENCE_MATERIAL, ArmorItem.Type.LEGGINGS,
+            () -> new ArmorItem(ModArmorMaterials.MOMS_ESSENCE_MATERIAL, ArmorItem.Type.LEGGINGS,
                     new Item.Properties()));
     public static final DeferredItem<ArmorItem> MOMSWIG = ITEMS.register("momswig",
-            () -> new ArmorItem(ModArmourMaterials.MOMS_ESSENCE_MATERIAL, ArmorItem.Type.HELMET,
+            () -> new ArmorItem(ModArmorMaterials.MOMS_ESSENCE_MATERIAL, ArmorItem.Type.HELMET,
                     new Item.Properties()));
     public static final DeferredItem<ArmorItem> MOMSHEELS = ITEMS.register("momsheels",
-            () -> new ArmorItem(ModArmourMaterials.MOMS_ESSENCE_MATERIAL, ArmorItem.Type.BOOTS,
+            () -> new ArmorItem(ModArmorMaterials.MOMS_ESSENCE_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties()));
 
     public static final DeferredItem<Item> SULFURDUST = ITEMS.register("sulfurdust",

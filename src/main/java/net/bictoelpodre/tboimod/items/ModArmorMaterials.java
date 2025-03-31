@@ -17,7 +17,7 @@ import java.util.EnumMap;
 import java.util.List;
 import java.util.function.Supplier;
 
-public class ModArmourMaterials {
+public class ModArmorMaterials {
     public static final Holder<ArmorMaterial> MOMS_ESSENCE_MATERIAL = register("momsessence",
             Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
                 attribute.put(ArmorItem.Type.CHESTPLATE, 0);
