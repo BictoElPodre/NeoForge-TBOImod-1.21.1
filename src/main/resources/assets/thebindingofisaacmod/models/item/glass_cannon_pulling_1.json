@@ -1,0 +1,6 @@
+{
+    "parent": "thebindingofisaacmod:item/glass_cannon",
+    "textures": {
+        "layer0": "thebindingofisaacmod:item/glass_cannon_pulling_1"
+    }
+}

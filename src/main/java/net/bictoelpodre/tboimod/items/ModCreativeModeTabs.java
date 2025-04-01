@@ -41,6 +41,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModedItems.SULFUR);
                         output.accept(ModedItems.DATAMINER);
+                        output.accept(ModedItems.GLASS_CANNON);
 
                     }).build());
 

@@ -62,7 +62,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         basicItem(ModedItems.MOMSESSENCE.get());
 
-        basicItem(ModedItems.SULFUR.get());
+        // basicItem(ModedItems.SULFUR.get());
         handhelditem(ModedItems.DATAMINER);
 
         buttonItem(ModBlocks.BASEMENTFLOOR_BUTTON, ModBlocks.BASEMENTFLOOR);
@@ -70,6 +70,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.BASEMENTFLOOR_WALL, ModBlocks.BASEMENTFLOOR);
 
         basicItem(ModBlocks.BASEMENTFLOOR_DOOR.asItem());
+
+        basicItem(ModedItems.TEARS.get());
     }
 
     private void trimmedArmorItem(DeferredItem<ArmorItem> itemDeferredItem) {

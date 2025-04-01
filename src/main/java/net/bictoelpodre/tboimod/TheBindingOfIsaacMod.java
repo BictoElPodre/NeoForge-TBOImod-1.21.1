@@ -2,9 +2,15 @@ package net.bictoelpodre.tboimod;
 
 import net.bictoelpodre.tboimod.block.ModBlocks;
 import net.bictoelpodre.tboimod.component.ModDataComponents;
+import net.bictoelpodre.tboimod.entity.ModEntities;
+import net.bictoelpodre.tboimod.entity.TearsRenderer;
 import net.bictoelpodre.tboimod.items.ModCreativeModeTabs;
 import net.bictoelpodre.tboimod.items.ModedItems;
+import net.bictoelpodre.tboimod.utils.ModItemProperties;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import org.slf4j.Logger;
 
@@ -46,6 +52,8 @@ public class TheBindingOfIsaacMod {
 
         ModDataComponents.register(modEventBus);
 
+        ModEntities.register(modEventBus);
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
@@ -72,5 +80,15 @@ public class TheBindingOfIsaacMod {
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
 
+    }
+
+    @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public static class ClientModEvents {
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent event) {
+            ModItemProperties.addCustomItemProperties();
+
+            EntityRenderers.register(ModEntities.TEARS_ENTITY.get(), TearsRenderer::new);
+        }
     }
 }

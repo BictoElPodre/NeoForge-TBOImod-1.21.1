@@ -2,7 +2,9 @@ package net.bictoelpodre.tboimod.items;
 
 import net.bictoelpodre.tboimod.TheBindingOfIsaacMod;
 import net.bictoelpodre.tboimod.items.custom.*;
+import net.bictoelpodre.tboimod.utils.ModItemProperties;
 import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PickaxeItem;
 import net.neoforged.bus.api.IEventBus;
@@ -45,6 +47,8 @@ public class ModedItems {
             () -> new AcidTearsItems(new Item.Properties(),50,50));
     public static final DeferredItem<Item> SULFURICDUST = ITEMS.register("sulfuricdust",
             () -> new AcidTearsItems(new Item.Properties(), 200, 200));
+    public static final DeferredItem<Item> TEARS = ITEMS.register("tears",
+            () -> new Item(new Item.Properties()));
 
     public static final DeferredItem<Item> MOMSESSENCE = ITEMS.register("momsessence",
             () -> new Item(new Item.Properties()));
@@ -53,8 +57,11 @@ public class ModedItems {
             () -> new BombItem(new Item.Properties().stacksTo(100)));
 
     public static final DeferredItem<PickaxeItem> DATAMINER = ITEMS.register("dataminer",
-            () -> new PickaxeItem(DataminerTier.DATAMINER, new Item.Properties()
+            () -> new PickaxeItem(DataminerTier.DATAMINER, new Item.Properties().stacksTo(1)
                     .attributes(PickaxeItem.createAttributes(DataminerTier.DATAMINER, 0.5f, -6))));
+
+    public static final DeferredItem<GlassCannonItem> GLASS_CANNON = ITEMS.register("glass_cannon",
+            () -> new GlassCannonItem(new Item.Properties().stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "thebindingofisaacmod:item/sulfur"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "thebindingofisaacmod:awakened": 1
+      },
+      "model": "thebindingofisaacmod:item/sulfur_awakened"
+    }
+  ]
+}
