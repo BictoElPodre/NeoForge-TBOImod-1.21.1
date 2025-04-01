@@ -2,6 +2,8 @@ package net.bictoelpodre.tboimod.entity;
 
 
 import net.bictoelpodre.tboimod.items.ModedItems;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -41,6 +43,11 @@ public class TearsEntity extends AbstractArrow {
     @Override
     protected void onHitBlock(BlockHitResult result) {
         super.onHitBlock(result);
+    }
+
+    @Override
+    public void playSound(SoundEvent sound, float volume, float pitch) {
+        super.playSound(SoundEvents.PLAYER_SPLASH, volume, pitch);
     }
 }
 

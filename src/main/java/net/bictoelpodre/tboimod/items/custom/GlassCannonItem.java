@@ -2,6 +2,8 @@ package net.bictoelpodre.tboimod.items.custom;
 
 import net.bictoelpodre.tboimod.entity.ModEntities;
 import net.bictoelpodre.tboimod.entity.TearsEntity;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
@@ -12,6 +14,7 @@ import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
+import javax.naming.Context;
 import java.util.function.Predicate;
 
 
@@ -28,11 +31,15 @@ public class GlassCannonItem extends BowItem {
 
             TearsEntity tears = new TearsEntity(user, level);
             tears.setOwner(user);
-            tears.setPos(user.getX(), user.getY() + user.getEyeHeight(), user.getZ());
+            tears.setPos(user.getX(), user.getY() + 1, user.getZ());
 
-            tears.shootFromRotation(user, user.getXRot(), user.getYRot(), 0.0f, 1.0f, 0.0f);
-
+            tears.shootFromRotation(user, user.getXRot(), user.getYRot(), 0.0f, 1.5f, 0.0f);
             level.addFreshEntity(tears);
+
+            if (user instanceof Player player) {
+                player.getCooldowns().addCooldown(stack.getItem(), 400);
+            }
+
 
         }
     }
@@ -46,8 +53,9 @@ public class GlassCannonItem extends BowItem {
     }
 
     @Override
-    public int getUseDuration(ItemStack stack, LivingEntity entity) {
-        return 40;
+    public int getDefaultProjectileRange() {
+        return 30;
     }
+
 }
 

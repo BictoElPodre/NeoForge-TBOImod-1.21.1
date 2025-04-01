@@ -18,7 +18,7 @@ public class ModEntities {
 
     public static final Supplier<EntityType<TearsEntity>> TEARS_ENTITY =
             ENTITIES.register("tears_entity", () -> EntityType.Builder.<TearsEntity>of(TearsEntity::new, MobCategory.MISC)
-                    .sized(1f,0.1f).build("tears_entity"));
+                    .sized(1f,1f).build("tears_entity"));
 
     public static void register(IEventBus eventBus) { ENTITIES.register(eventBus); }
 }
