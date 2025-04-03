@@ -71,9 +71,13 @@ public class TheBindingOfIsaacMod {
             event.accept(ModedItems.SULFURROCK);
             event.accept(ModedItems.SULFURICDUST);
         }
+
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.SULFURBLOCK);
+            event.accept(ModBlocks.MAIN_ANGELIC_ALTAR);
         }
+
+
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

@@ -2,12 +2,12 @@ package net.bictoelpodre.tboimod.network;
 
 import io.netty.buffer.ByteBuf;
 import net.bictoelpodre.tboimod.TheBindingOfIsaacMod;
+import net.bictoelpodre.tboimod.entity.TearsEntity;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.projectile.Snowball;
 import net.minecraft.world.level.Level;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -33,7 +33,8 @@ public class TearsHandler {
                         Player player = context.player();
                         Level level = context.player().level();
                         if (payload.tearskeydown) {
-                            Snowball tears = new Snowball(level, player);
+                            TearsEntity tears = new TearsEntity(player, level);
+                            tears.setPos(tears.getX(), tears.getY() - 0.75  , tears.getZ());
                             tears.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 1.5F, 0.0F);
                             level.addFreshEntity(tears);
                         }

@@ -11,7 +11,8 @@ public class KeyRegister {
 
     @SubscribeEvent
     public static void onKeyRegister(RegisterKeyMappingsEvent event) {
-        event.register(KeyBinding.TEARS_KEY);
-
+        for (var keyMapping : KeyBinding.KEY_MAPPINGS) {
+            event.register(keyMapping);
+        }
     }
 }

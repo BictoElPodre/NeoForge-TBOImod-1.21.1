@@ -1,4 +1,4 @@
-// 1.21.1	2025-03-26T12:49:49.6895885	Loot Tables
+// 1.21.1	2025-04-03T23:30:35.7920402	Loot Tables
 3a615294df1a41379fb2fe64841475fa98a0c7ce data/thebindingofisaacmod/loot_table/blocks/basementfloor.json
 defe12a1b7aa7b3bb46197afcf229029d460c3b2 data/thebindingofisaacmod/loot_table/blocks/basementfloor_button.json
 dc0e444ee90180109f22f95230ba31e46ffacfc0 data/thebindingofisaacmod/loot_table/blocks/basementfloor_door.json
@@ -10,4 +10,5 @@ ce3b8df8e593fb18e5cfd9e663f187abebd91029 data/thebindingofisaacmod/loot_table/bl
 9aab4388721c000023df299c54316a72aa960497 data/thebindingofisaacmod/loot_table/blocks/basementfloor_trapdoor.json
 4936322497b0b598a16a6f833e59b9fd78b22629 data/thebindingofisaacmod/loot_table/blocks/basementfloor_wall.json
 0a4e41928c669d1f472ad87c000be3f5693f5fa3 data/thebindingofisaacmod/loot_table/blocks/basementrock.json
+61e4ce37252a9cf237bd5b81a32e2f0dffa36ef5 data/thebindingofisaacmod/loot_table/blocks/main_angelic_altar.json
 5fdbfd1e746d86bc7355cea8496147fa87b79d29 data/thebindingofisaacmod/loot_table/blocks/sulfurblock.json

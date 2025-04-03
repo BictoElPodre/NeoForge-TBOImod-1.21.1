@@ -43,6 +43,7 @@ public class TearsEntity extends AbstractArrow {
     @Override
     protected void onHitBlock(BlockHitResult result) {
         super.onHitBlock(result);
+        this.discard();
     }
 
     @Override

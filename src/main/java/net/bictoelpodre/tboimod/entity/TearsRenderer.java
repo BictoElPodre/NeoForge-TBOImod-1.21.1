@@ -33,7 +33,7 @@ public class TearsRenderer extends EntityRenderer<TearsEntity> {
 
     @Override
     public Vec3 getRenderOffset(TearsEntity entity, float partialTicks) {
-        return new Vec3(0.0, -0.5, 0.0);
+        return new Vec3(0.0, -1, 0.0);
     }
 
     @Override
