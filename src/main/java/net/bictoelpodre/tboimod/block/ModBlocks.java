@@ -1,6 +1,9 @@
 package net.bictoelpodre.tboimod.block;
 
 import net.bictoelpodre.tboimod.TheBindingOfIsaacMod;
+import net.bictoelpodre.tboimod.block.custom.CellarFloor;
+import net.bictoelpodre.tboimod.block.custom.LateralAngelicAltar;
+import net.bictoelpodre.tboimod.block.custom.MainAngelicAltar;
 import net.bictoelpodre.tboimod.block.custom.SulfurBlock;
 import net.bictoelpodre.tboimod.items.ModedItems;
 import net.minecraft.network.chat.Component;
@@ -26,6 +29,10 @@ public class ModBlocks {
     public static final DeferredBlock<Block> BASEMENTFLOOR = registerBlock("basementfloor",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(-1F).requiresCorrectToolForDrops().sound(SoundType.MUD_BRICKS)));
+    public static final DeferredBlock<Block> CELLAR_FLOOR = registerBlock("cellar_floor",
+            () -> new CellarFloor(BlockBehaviour.Properties.of()
+                    .strength(1F).requiresCorrectToolForDrops().sound(SoundType.WOOD)));
+
     public static final DeferredBlock<StairBlock> BASEMENTFLOOR_STAIRS = registerBlock("basementfloor_stairs",
             () -> new StairBlock(ModBlocks.BASEMENTFLOOR.get().defaultBlockState(),
                     BlockBehaviour.Properties.of().strength(-1F).requiresCorrectToolForDrops().sound(SoundType.MUD_BRICKS)));
@@ -50,7 +57,10 @@ public class ModBlocks {
             () -> new SulfurBlock(BlockBehaviour.Properties.of()
                     .strength(1F).requiresCorrectToolForDrops().sound(SoundType.SAND)));
     public static final DeferredBlock<Block> MAIN_ANGELIC_ALTAR = registerBlock("main_angelic_altar",
-            () -> new Block(BlockBehaviour.Properties.of()
+            () -> new MainAngelicAltar(BlockBehaviour.Properties.of().noOcclusion()
+                    .strength(1F).requiresCorrectToolForDrops().sound(SoundType.SAND)));
+    public static final DeferredBlock<Block> LATERAL_ANGELIC_ALTAR = registerBlock("lateral_angelic_altar",
+            () -> new LateralAngelicAltar(BlockBehaviour.Properties.of().noOcclusion()
                     .strength(1F).requiresCorrectToolForDrops().sound(SoundType.SAND)));
 
 

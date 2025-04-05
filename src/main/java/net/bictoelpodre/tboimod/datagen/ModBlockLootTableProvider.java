@@ -18,6 +18,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(ModBlocks.BASEMENTFLOOR.get());
+        dropSelf(ModBlocks.CELLAR_FLOOR.get());
+        dropSelf(ModBlocks.BASEMENTFLOOR.get());
+        dropSelf(ModBlocks.BASEMENTFLOOR.get());
+        dropSelf(ModBlocks.BASEMENTFLOOR.get());
         dropSelf(ModBlocks.BASEMENTFLOOR_STAIRS.get());
         dropSelf(ModBlocks.BASEMENTFLOOR_BUTTON.get());
         dropSelf(ModBlocks.BASEMENTFLOOR_FENCE.get());

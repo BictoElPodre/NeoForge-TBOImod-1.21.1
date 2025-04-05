@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "thebindingofisaacmod:block/lateral_angelic_altar"
+    },
+    "facing=south": {
+      "model": "thebindingofisaacmod:block/lateral_angelic_altar",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "thebindingofisaacmod:block/lateral_angelic_altar",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "thebindingofisaacmod:block/lateral_angelic_altar",
+      "y": 270
+    }
+  }
+}

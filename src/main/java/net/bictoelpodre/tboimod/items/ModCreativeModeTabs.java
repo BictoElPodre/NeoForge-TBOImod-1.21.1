@@ -61,6 +61,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BASEMENTFLOOR_DOOR);
                         output.accept(ModBlocks.BASEMENTFLOOR_TRAPDOOR);
                         output.accept(ModBlocks.BASEMENTROCK);
+                        output.accept(ModBlocks.CELLAR_FLOOR);
 
                     }).build());
 
