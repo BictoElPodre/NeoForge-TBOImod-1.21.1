@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "thebindingofisaacmod:block/cellar_wall_v1"
+  }
+}

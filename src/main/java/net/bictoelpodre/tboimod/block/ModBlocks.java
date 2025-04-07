@@ -1,10 +1,7 @@
 package net.bictoelpodre.tboimod.block;
 
 import net.bictoelpodre.tboimod.TheBindingOfIsaacMod;
-import net.bictoelpodre.tboimod.block.custom.CellarFloor;
-import net.bictoelpodre.tboimod.block.custom.LateralAngelicAltar;
-import net.bictoelpodre.tboimod.block.custom.MainAngelicAltar;
-import net.bictoelpodre.tboimod.block.custom.SulfurBlock;
+import net.bictoelpodre.tboimod.block.custom.*;
 import net.bictoelpodre.tboimod.items.ModedItems;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.BlockItem;
@@ -31,6 +28,9 @@ public class ModBlocks {
                     .strength(-1F).requiresCorrectToolForDrops().sound(SoundType.MUD_BRICKS)));
     public static final DeferredBlock<Block> CELLAR_FLOOR = registerBlock("cellar_floor",
             () -> new CellarFloor(BlockBehaviour.Properties.of()
+                    .strength(1F).requiresCorrectToolForDrops().sound(SoundType.WOOD)));
+    public static final DeferredBlock<Block> CELLAR_WALL = registerBlock("cellar_wall",
+            () -> new CellarWall(BlockBehaviour.Properties.of()
                     .strength(1F).requiresCorrectToolForDrops().sound(SoundType.WOOD)));
 
     public static final DeferredBlock<StairBlock> BASEMENTFLOOR_STAIRS = registerBlock("basementfloor_stairs",

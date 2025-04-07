@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "variant=v1,flipped=false": { "model": "thebindingofisaacmod:block/cellar_wall_v1", "x": 0 },
+    "variant=v1,flipped=true":  { "model": "thebindingofisaacmod:block/cellar_wall_v1", "x": 180 },
+
+    "variant=v2,flipped=false": { "model": "thebindingofisaacmod:block/cellar_wall_v2", "x": 0 },
+    "variant=v2,flipped=true":  { "model": "thebindingofisaacmod:block/cellar_wall_v2", "x": 180 },
+
+    "variant=v3,flipped=false": { "model": "thebindingofisaacmod:block/cellar_wall_v3", "x": 0 },
+    "variant=v3,flipped=true":  { "model": "thebindingofisaacmod:block/cellar_wall_v3", "x": 180 },
+
+    "variant=v4,flipped=false": { "model": "thebindingofisaacmod:block/cellar_wall_v4", "x": 0 },
+    "variant=v4,flipped=true":  { "model": "thebindingofisaacmod:block/cellar_wall_v4", "x": 180 },
+
+    "variant=v5,flipped=false": { "model": "thebindingofisaacmod:block/cellar_wall_v5", "x": 0 },
+    "variant=v5,flipped=true":  { "model": "thebindingofisaacmod:block/cellar_wall_v5", "x": 180 },
+
+    "variant=v6,flipped=false": { "model": "thebindingofisaacmod:block/cellar_wall_v6", "x": 0 },
+    "variant=v6,flipped=true":  { "model": "thebindingofisaacmod:block/cellar_wall_v6", "x": 180 },
+
+    "variant=v7,flipped=false": { "model": "thebindingofisaacmod:block/cellar_wall_v7", "x": 0 },
+    "variant=v7,flipped=true":  { "model": "thebindingofisaacmod:block/cellar_wall_v7", "x": 180 },
+
+    "variant=v8,flipped=false": { "model": "thebindingofisaacmod:block/cellar_wall_v8", "x": 0 },
+    "variant=v8,flipped=true":  { "model": "thebindingofisaacmod:block/cellar_wall_v8", "x": 180 },
+
+    "variant=v9,flipped=false": { "model": "thebindingofisaacmod:block/cellar_wall_v9", "x": 0 },
+    "variant=v9,flipped=true":  { "model": "thebindingofisaacmod:block/cellar_wall_v9", "x": 180 }
+  }
+}
