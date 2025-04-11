@@ -27,10 +27,13 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(-1F).requiresCorrectToolForDrops().sound(SoundType.MUD_BRICKS)));
     public static final DeferredBlock<Block> CELLAR_FLOOR = registerBlock("cellar_floor",
-            () -> new CellarFloor(BlockBehaviour.Properties.of()
+            () -> new CellarFloor(BlockBehaviour.Properties.of().lightLevel(state -> 5)
                     .strength(1F).requiresCorrectToolForDrops().sound(SoundType.WOOD)));
     public static final DeferredBlock<Block> CELLAR_WALL = registerBlock("cellar_wall",
-            () -> new CellarWall(BlockBehaviour.Properties.of()
+            () -> new CellarWall(BlockBehaviour.Properties.of().lightLevel(state -> 5)
+                    .strength(1F).requiresCorrectToolForDrops().sound(SoundType.WOOD)));
+    public static final DeferredBlock<Block> CELLAR_BEAM = registerBlock("cellar_beam",
+            () -> new Block(BlockBehaviour.Properties.of().noOcclusion().lightLevel(state -> 10)
                     .strength(1F).requiresCorrectToolForDrops().sound(SoundType.WOOD)));
 
     public static final DeferredBlock<StairBlock> BASEMENTFLOOR_STAIRS = registerBlock("basementfloor_stairs",
@@ -73,7 +76,6 @@ public class ModBlocks {
                     super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
                 }
             });
-
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
