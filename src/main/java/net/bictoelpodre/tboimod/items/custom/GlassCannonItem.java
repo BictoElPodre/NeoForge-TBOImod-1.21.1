@@ -31,7 +31,8 @@ public class GlassCannonItem extends BowItem {
 
             TearsEntity tears = new TearsEntity(user, level);
             tears.setOwner(user);
-            tears.setPos(user.getX(), user.getY() + 1, user.getZ());
+            // Spawn at eye level (like vanilla arrows)
+            tears.setPos(user.getX(), user.getEyeY() - 0.1, user.getZ());
 
             tears.shootFromRotation(user, user.getXRot(), user.getYRot(), 0.0f, 1.5f, 0.0f);
             level.addFreshEntity(tears);

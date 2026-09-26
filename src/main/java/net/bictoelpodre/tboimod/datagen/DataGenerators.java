@@ -39,6 +39,9 @@ public class DataGenerators {
         generator.addProvider(event.includeClient(), new ModItemModelProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeClient(), new ModBlockStatesProvider(packOutput, existingFileHelper));
 
+        // Generate character textures
+        generator.addProvider(event.includeClient(), new CharacterTextureGenerator(packOutput, existingFileHelper));
+
         generator.addProvider(event.includeServer(), new ModDataMapProvider(packOutput, lookupProvider));
     }
 }

@@ -2,6 +2,7 @@ package net.bictoelpodre.tboimod.entity;
 
 
 import net.bictoelpodre.tboimod.items.ModedItems;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.Entity;
@@ -19,7 +20,12 @@ public class TearsEntity extends AbstractArrow {
     }
 
     public TearsEntity(LivingEntity shooter, Level level) {
-        super(ModEntities.TEARS_ENTITY.get(), shooter, level, ItemStack.EMPTY, new ItemStack(ModedItems.GLASS_CANNON.get()));
+        super(ModEntities.TEARS_ENTITY.get(), shooter, level, new ItemStack(ModedItems.GLASS_CANNON.get()), ItemStack.EMPTY);
+    }
+
+    // Constructor for network spawning (no weapon required)
+    public TearsEntity(Level level) {
+        super(ModEntities.TEARS_ENTITY.get(), level);
     }
 
     @Override
@@ -49,6 +55,17 @@ public class TearsEntity extends AbstractArrow {
     @Override
     public void playSound(SoundEvent sound, float volume, float pitch) {
         super.playSound(SoundEvents.PLAYER_SPLASH, volume, pitch);
+    }
+
+    @Override
+    public void addAdditionalSaveData(CompoundTag compound) {
+        // Don't call super - it tries to save the weapon stack which is empty
+        // Save only our custom data if needed
+    }
+
+    @Override
+    public void readAdditionalSaveData(CompoundTag compound) {
+        // Don't call super - it tries to read the weapon stack
     }
 }
 

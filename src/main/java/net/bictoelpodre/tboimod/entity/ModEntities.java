@@ -2,10 +2,8 @@ package net.bictoelpodre.tboimod.entity;
 
 import net.bictoelpodre.tboimod.TheBindingOfIsaacMod;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.item.Tier;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 

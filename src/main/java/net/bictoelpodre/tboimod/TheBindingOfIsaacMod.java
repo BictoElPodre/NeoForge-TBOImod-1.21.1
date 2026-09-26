@@ -1,6 +1,8 @@
 package net.bictoelpodre.tboimod;
 
 import net.bictoelpodre.tboimod.block.ModBlocks;
+import net.bictoelpodre.tboimod.capability.CharacterCapability;
+import net.bictoelpodre.tboimod.character.ModCharacters;
 import net.bictoelpodre.tboimod.component.ModDataComponents;
 import net.bictoelpodre.tboimod.entity.ModEntities;
 import net.bictoelpodre.tboimod.entity.TearsRenderer;
@@ -54,6 +56,9 @@ public class TheBindingOfIsaacMod {
 
         ModEntities.register(modEventBus);
 
+        // Register character capabilities
+        CharacterCapability.registerCapabilities(modEventBus);
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
@@ -62,6 +67,7 @@ public class TheBindingOfIsaacMod {
     }
 
     private void commonSetup(final FMLCommonSetupEvent commonSetupEvent) {
+        ModCharacters.init();
     }
 
     // Add the example block item to the building blocks tab

@@ -1,6 +1,5 @@
 package net.bictoelpodre.tboimod.items;
 
-import com.mojang.blaze3d.platform.Monitor;
 import net.bictoelpodre.tboimod.TheBindingOfIsaacMod;
 import net.bictoelpodre.tboimod.block.ModBlocks;
 import net.minecraft.core.registries.Registries;

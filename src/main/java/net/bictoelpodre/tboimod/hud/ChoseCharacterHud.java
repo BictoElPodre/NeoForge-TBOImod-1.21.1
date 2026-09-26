@@ -31,7 +31,6 @@ public class ChoseCharacterHud {
         }
 
         int size = 32 * ((1-m) / 1);
-wa
         guiGraphics.blit(AZAZEL_FRAME, 0, 0, 0, 0, size, size, size, size);
     }
 }
