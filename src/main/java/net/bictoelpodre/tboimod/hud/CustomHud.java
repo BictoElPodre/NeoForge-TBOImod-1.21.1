@@ -23,7 +23,7 @@ public class CustomHud {
     private static final ResourceLocation TEARSSTAT = ResourceLocation.fromNamespaceAndPath(TheBindingOfIsaacMod.MOD_ID, "textures/gui/tearsstat.png");
     private static final ResourceLocation DAMAGESTAT = ResourceLocation.fromNamespaceAndPath(TheBindingOfIsaacMod.MOD_ID, "textures/gui/damagestat.png");
 
-    private static int m =0;
+    private static int m = 0;
 
     @SubscribeEvent
     public static void onRenderGameOverlay(RenderGuiLayerEvent.Post event) {

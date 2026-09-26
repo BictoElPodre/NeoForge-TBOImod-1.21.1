@@ -50,6 +50,7 @@
   "key.categories.thebindingofisaacmod": "TBOImod",
   "key.thebindingofisaacmod.shoot_snowball": "Tears shooting",
   "key.thebindingofisaacmod.toggle_hud_size": "Toggle Hud Size",
+  "key.thebindingofisaacmod.character_selection_hud": "Show/Hide Character Hud",
 
   "entity.thebindingofisaacmod.tears_entity": "Tears Entity"
 }

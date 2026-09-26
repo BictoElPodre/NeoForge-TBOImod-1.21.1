@@ -29,6 +29,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.BASEMENTFLOOR_WALL.get());
         dropSelf(ModBlocks.BASEMENTFLOOR_TRAPDOOR.get());
         dropSelf(ModBlocks.BASEMENTFLOOR_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.CELLAR_WALL.get());
+        dropSelf(ModBlocks.CELLAR_BEAM.get());
+        dropSelf(ModBlocks.MAIN_ANGELIC_ALTAR.get());
+        dropSelf(ModBlocks.LATERAL_ANGELIC_ALTAR.get());
         add(ModBlocks.BASEMENTFLOOR_DOOR.get(),
                 block -> createDoorTable(ModBlocks.BASEMENTFLOOR_DOOR.get()));
         add(ModBlocks.BASEMENTFLOOR_SLAB.get(),
