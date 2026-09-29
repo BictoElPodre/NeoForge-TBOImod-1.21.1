@@ -14,6 +14,7 @@ public class KeyBinding {
     public static final String TEARS_SHOOTING = "key.thebindingofisaacmod.tears_shooting";
     public static final String TOGGLE_HUD_SIZE = "key.thebindingofisaacmod.toggle_hud_size";
     public static final String CHARACTER_SELECTION_HUD = "key.thebindingofisaacmod.character_selection_hud";
+    public static final String CHEAT_MENU = "key.thebindingofisaacmod.cheat_menu";
 
     public static final List<KeyMapping> KEY_MAPPINGS= new ArrayList<>();
 
@@ -38,6 +39,13 @@ public class KeyBinding {
                 KeyConflictContext.IN_GAME,
                 InputConstants.Type.KEYSYM,
                 GLFW.GLFW_KEY_M,
+                KEY_CATEGORY_TUTORIAL));
+
+        KEY_MAPPINGS.add(new KeyMapping(
+                CHEAT_MENU,
+                KeyConflictContext.IN_GAME,
+                InputConstants.Type.KEYSYM,
+                GLFW.GLFW_KEY_L,
                 KEY_CATEGORY_TUTORIAL));
     }
 }

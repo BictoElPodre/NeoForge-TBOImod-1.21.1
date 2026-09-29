@@ -29,8 +29,32 @@ public class ServerTearTickHandler {
                 ServerLevel level = player.serverLevel();
                 TearsEntity tears = new TearsEntity(level);
                 tears.setOwner(player);
-                tears.setPos(player.getX(), player.getEyeY() - 0.1, player.getZ());
-                tears.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 1.5F, 0.0F);
+                
+                // Spawn ligeramente delante del jugador (0.5 bloques adelante) para evitar colisión inicial
+                double spawnX = player.getX() + Math.sin(Math.toRadians(-player.getYRot())) * 0.5;
+                double spawnZ = player.getZ() + Math.cos(Math.toRadians(-player.getYRot())) * 0.5;
+                tears.setPos(spawnX, player.getEyeY() - 0.1, spawnZ);
+                
+                // Obtener stats del personaje para determinar velocidad y range
+                var attachment = player.getData(net.bictoelpodre.tboimod.capability.CharacterCapability.CHARACTER_STATS);
+                float shotSpeed = attachment != null ? attachment.getBaseShotSpeed() : 1.0f;
+                float range = attachment != null ? attachment.getBaseRange() : 6.5f;
+                
+                // DEBUG
+                System.out.println("[TBOI DEBUG] Spawning tear for " + player.getName().getString() + 
+                    " shotSpeed=" + shotSpeed + " range=" + range + 
+                    " velocity=" + (1.5F * shotSpeed) + " pos=(" + spawnX + "," + spawnZ + ")");
+                
+                // Calcular velocidad basada en shot speed (factor 1.5 = velocidad base vanilla)
+                float velocity = 1.5F * shotSpeed;
+                
+                tears.setOwner(player);
+                tears.setPos(spawnX, player.getEyeY() - 0.1, spawnZ);
+                tears.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, velocity, 0.0F);
+                
+                // Pasar range para calcular lifetime
+                tears.setTearRange(range);
+                
                 level.addFreshEntity(tears);
 
                 // Reset cooldown

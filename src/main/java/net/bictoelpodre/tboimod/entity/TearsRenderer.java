@@ -22,6 +22,7 @@ public class TearsRenderer extends EntityRenderer<TearsEntity> {
 
     @Override
     public void render(TearsEntity tears, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource buffer, int packedLight) {
+        System.out.println("[TBOI DEBUG Renderer] Rendering tear at " + tears.getX() + "," + tears.getY() + "," + tears.getZ() + " age=" + tears.tickCount);
         poseStack.pushPose();
 
         VertexConsumer vertexconsumer = ItemRenderer.getFoilBufferDirect(
